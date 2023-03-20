@@ -26,6 +26,6 @@ New major mode is introduced based on Markdown mode. In this mode two keybinding
 Configuration is available through `M-x customize-group ema`
 
 
-## Atrribution
+## Attribution
 
 Inspired by https://github.com/CarlQLange/chatgpt-arcana.el Written with the help of ChatGPT :)
