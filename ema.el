@@ -29,6 +29,11 @@
   :type 'string
   :group 'ema)
 
+(defcustom ema-timeout 30
+  "OpenAI model to use."
+  :type 'integer
+  :group 'ema)
+
 (defcustom ema-fallback-system-prompt
   "You are a helpful AI assistant living inside Emacs. Help the user."
   "A fallback system prompt used if the current major mode is not found in `ema-system-prompts-alist`."
@@ -102,7 +107,7 @@ The JSON should be a list of messages like (:role ,role :content ,content)"
     (request
       ema-api-endpoint
       :type "POST"
-      :timeout 30
+      :timeout ema-timeout
       :data (json-encode `(:model ,ema-model-name
                                   :messages ,messages-alist))
       :headers `(("Content-Type" . "application/json")
