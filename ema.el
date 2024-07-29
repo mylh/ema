@@ -24,7 +24,7 @@
   :type 'string
   :group 'ema)
 
-(defcustom ema-model-name "gpt-3.5-turbo"
+(defcustom ema-model-name "gpt-4o"
   "OpenAI model to use."
   :type 'string
   :group 'ema)
